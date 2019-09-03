@@ -32,7 +32,7 @@
 					<div class="container">
 						<!-- logo -->
 						<div class="nav-logo">
-							<a href="/wordpress/index.php" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a>
+							<a href="<?php bloginfo( 'url' ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a>
 						</div>
 						<!-- /logo -->
 						<?php wp_nav_menu( array(

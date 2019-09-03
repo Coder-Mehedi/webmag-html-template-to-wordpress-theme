@@ -22,7 +22,7 @@
 										<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></a>
 									<div class="post-body">
 										<div class="post-meta">
-											<?php the_category( $separator = '|') ?>
+											<?php the_category( $separator = ' ') ?>
 											
 											<a href="<?php bloginfo('url'); ?>/<?php the_time('Y') ?>/<?php the_time('m') ?>/<?php the_time('j') ?>"><?php echo get_the_date(); ?></a>
 

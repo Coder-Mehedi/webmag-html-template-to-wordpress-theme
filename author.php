@@ -14,27 +14,32 @@
 														
 														
 							<!-- post -->
-							<?php if (have_posts()): ?>
-							<?php while(have_posts()): ?>
-      						<?php the_post(); ?>
-							<!-- post -->
-							<div class="col-md-12">
-								<div class="post post-row">
-									<a class="post-img" href="<?php echo get_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></a>
-									<div class="post-body">
-										<div class="post-meta">
-											<a class="post-category cat-2" href=""><?php echo get_the_category()[0]->name; ?></a>
+					<?php if (have_posts()): ?>
+					<?php while(have_posts()): ?>
+					<?php the_post(); ?>
+						<div class="col-md-12">
+							<div class="post post-row">
+								<a class="post-img" href="<?php echo get_permalink() ?>">
+									<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></a>
+								<div class="post-body">
+									<div class="post-meta">
+										<?php the_category( $separator = ' ') ?>
+										
+										<a href="<?php bloginfo('url'); ?>/<?php the_time('Y') ?>/<?php the_time('m') ?>/<?php the_time('j') ?>"><?php echo get_the_date(); ?></a>
 
-											<span class="post-date"><?php echo get_the_date() ?></span>
-										</div>
-										<h3 class="post-title"><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h3>
-										<p><?php echo substr(get_the_content(), 0, 100) . " ...";?></p>
+										<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+										<?php echo get_the_author_meta('display_name') ?></a>
+
 									</div>
+
+									<h3 class="post-title"><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h3>
+									<p><?php echo substr(get_the_content(), 0, 200) . " ...";?></p>
 								</div>
 							</div>
-							<?php endwhile ?>
-							<?php endif ?>
-							<!-- /post -->
+						</div>
+					<?php endwhile; ?>
+					<?php endif; ?>
+					<!-- /post -->
 							
 						</div>
 					</div>

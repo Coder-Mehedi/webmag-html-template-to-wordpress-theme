@@ -3,13 +3,17 @@
 		<div class="section">
 			<!-- container -->
 			<div class="container">
+				<div class="center">
+					<h2>All posts from category: <?php single_cat_title() ?>
+					</h2>
+				</div>
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-8">
 						<div class="row">
 							<div class="col-md-12">
 								<div class="section-title center">
-									<h2>All posts from category: <?php the_category()?></h2>
+									
 								</div>
 							</div>
 							<!-- post -->
