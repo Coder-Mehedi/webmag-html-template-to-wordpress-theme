@@ -60,15 +60,18 @@
 						
 						<!-- tags -->
 						<div class="aside-widget">
-							<div class="tags-widget">
-								<?php 
-									if(is_author()){
-										echo 'yeah its author';
-									} else {
-										echo 'not author';
-									}
-
-								 ?>
+							<div class="author-widget">
+								<h2>Author Information</h2>
+								<?php if(is_author()): ?>
+									<?php echo get_avatar( get_the_author_meta('ID'), $size = 360) ?>
+									<div class="author-info">
+										<h3>Name: <?php the_author(); ?></h3>
+										<h4>Email: <?php the_author_meta( 'email' ) ?></h4>
+										
+									</div>
+										
+									
+								 <?php endif; ?>
 							</div>
 						</div>
 						<!-- /tags -->
