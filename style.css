@@ -103,7 +103,8 @@ span.name {
      margin-top: 20px;
      margin-bottom: 40px;
 }
- .input {
+ .input,
+ .comment-form-comment textarea {
      height: 40px;
      border: 2px solid #eceef2;
      width: 100%;
@@ -114,11 +115,13 @@ span.name {
  .input:focus {
      border-color: #3d455c;
 }
- textarea.input {
+ textarea.input,
+ .comment-form-comment textarea {
      height: 90px;
      padding: 15px;
 }
- .primary-button {
+ .primary-button,
+ .form-submit input.submit {
      padding: 9px 45px;
      border: none;
      background-color: #212631;
